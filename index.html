@@ -7,20 +7,17 @@
 </head>
 <body>
     <script>
-        function solution (a, b, c) {
-            let answer;
-            if(a < b) {
-                answer=a;
-            } else {
-                answer=b;
-            }
-            if(answer < c) {
+        function solution(a, b, c){
+                let answer="YES", max;
+                let tot=a+b+c;
+                if(a>b) max=a;
+                else max=b;
+                if(c>max) max=c;
+                if(tot-max<=max) answer="NO"; 
                 return answer;
-            } else {
-                answer=c;
             }
-        }
-        console.log(solution(6, 5, 11));
+
+            console.log(solution(13, 33, 17));
     </script>
 </body>
 </html>
